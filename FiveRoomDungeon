@@ -1,0 +1,643 @@
+import random, os, time
+
+print("ABILITY SCORE")
+print()
+print("""Strength - Strength measures your character's physical power. Strength is important 
+if your character plans to engage in hand-to-hand combat. Your Strength modifier gets added 
+to melee damage rolls and determines how much your character can carry.
+
+Dexterity - Dexterity measures your character's agility, balance, and reflexes. Dexterity is 
+important if your character plans to make attacks with ranged weapons or use stealth to 
+surprise foes.
+
+Constitution - Constitution measures your character's health and stamina. Constitution is 
+important for all characters, especially those who fight in close range.
+
+Intelligence - Intelligence measures how well your character can learn and reason. A high 
+Intelligence allows your character to analyze situations and understand patterns, and it means 
+they can become trained in additional skills and might be able to master additional languages.
+
+Wisdom - Wisdom measures your character's common sense, awareness, and intuition. High Wisdom 
+helps your character detect hidden things and resist mental effects.
+
+Charisma - Charisma measures your character's personal magnetism and strength of personality. 
+A high Charisma modifier helps you build relationships and influence the thoughts and moods of 
+others with social skills.""")
+
+print()
+
+print("CHARACTER BUILDER")
+print()
+
+print("""To begin let's start with your identity, Consider these traits for your character like 
+ the name of you character """)
+print()
+nameHero = input("Name your Legend: ")
+print("And the age of your character")
+print()
+age = input(" What's your character Age?: ")
+print()
+# Start of description for character Ancestries
+time.sleep(2)
+print(""" Now the description of character types
+
+            Grippli - Gripplis are shy and cautious people who generally seek to avoid being drawn into the 
+            complicated and dangerous affairs of others. Despite their outlook and small stature, gripplis 
+            often take bold and noble action when the situation demands it. Reclusive and canny, gripplis are
+            treetop survivalists who harvest their homes' bounty and defend themselves against terrible 
+            threats. Their reliance on cunning and simple tools has led to gripplis being mischaracterized
+            as primitive, yet this overlooks their shaping of the land with hidden orchards and camouflaged 
+            causeways that allow gripplis to live in prosperous peace. Gripplis are most likely to emerge 
+            from their forest homes to trade, explore, and combat threats that would despoil the world.
+            Health - 6
+            Speed - 25
+            +1  free boost 
+            +1  Dexterity boost
+            +1  Wisdom boost
+            -1 Strength Penalty 
+        """)
+
+time.sleep(2)
+
+print("""Puppet master - has the ability to make and bring to life puppets but he can only 
+            bring them to life if they use the spell
+            Health - 8 
+            Speed - 25 
+            2x free boosts
+         """)
+
+time.sleep(2)
+
+print(""" Vishkany - Vishkanyas are ophidian humanoids who carry potent venom within their
+            blood and saliva. Largely misunderstood due to old tales of their toxicity and natural finesse,
+            vishkanyas work to grow into more than just what stories paint them to be. 
+            The true nature of vishkanyas' origin is a matter of debate. 
+            Some vishkanyas believe they are rejected spawn of Ravithra, which explains the animosity 
+            between vishkanyas and nagas. Others believe themselves the stolen offspring of a forgotten
+            progenitor whose name was excised from history. Regardless, one thing is quite clear:
+            vishkanyas are survivors. Throughout history, fear of their deadly abilities forced vishkanyas
+            to experience subjugation, exploitation, and ostracizing. 
+            Yet through it all, they endured. Now free of chains to bind them, vishkanyas live in 
+            close-knit groups, and use their love of storytelling and the arts to keep a detailed 
+            history of their people while they determine how best to proceed in a world ripe with o
+            pportunity.
+             Health - 8 
+             Speed - 25 
+             +1 Dexterity boost 
+             +1 Free boost
+         """)
+
+time.sleep(2)
+
+print("""Human - As unpredictable and varied as any, humans have exceptional drive and the
+        capacity to endure and expand.Though many civilizations thrived before humanity rose to
+        prominence, humans have built some of the greatest and the most terrible societies throughout
+        the course of history, and today they are the most populous people in the realms.
+
+        Health - 8
+        Speed - 25
+        2x free boosts
+        """)
+# End of description for characters Ancestries
+
+# Start of pick your Ancestries
+ancestryPick: str = input("Choose your Ancestry: ")
+if ancestryPick == "Grippli":
+    print("""Great choice!!, since you have chosen Grippli you have 
+        Health - 8
+        Speed - 25
+        and you get
+        +1  free boost 
+        +1  Dexterity boost
+        +1  Wisdom boost
+        -1 Strength Penalty """)
+
+elif ancestryPick == "Puppet master":
+    print("""Great choice!!, since you have chosen Puppet master you have 
+        Health - 8
+        Speed - 25
+        and you get
+        2x free boosts """)
+
+elif ancestryPick == "Vishkany":
+    print("""Great choice!!, since you have chosen Vishkany you have 
+                Health - 8 
+                Speed - 25 
+                +1 Dexterity boost 
+                +1 Free boost """)
+
+elif ancestryPick == "Human":
+    print("""Great choice!!, since you have chosen Human you have 
+                Health - 8
+                Speed - 25
+                2x free boosts """)
+
+else:
+    print("ummm...ok? you were supposed to choose one of the Ancestry's...?")
+# End of pick your Ancesties
+# Start of Background description
+print()
+print("Now you will have to choose a background there are three to choose from")
+print()
+print("""Bandit - Your past includes no small amount of rural banditry, robbing travelers on the 
+        road and scraping by. Whether your robbery was sanctioned by a local noble or you did so of 
+        your own accord, you eventually got caught up in the adventuring life. Now, adventure is your 
+        stock and trade, and years of camping and skirmishing have only helped.
+
+        Choose two attribute boosts. One must be to Dexterity or Charisma, 
+        and one is a free attribute boost.""")
+
+print("""Gambler - The thrill of the win drew you into games of chance. This might have been a 
+        lucrative sideline that paled in comparison to the real risks of adventuring, or you might have 
+        fallen on hard times due to your gambling and pursued adventuring as a way out of a spiral.
+
+        Choose two attribute boosts. One must be to Dexterity or Charisma, 
+        and one is a free attribute boost.""")
+
+print("""Junk Collector - You live by the adage that one person's trash is another's treasure. 
+        Whether by sifting through scrap heaps or digging up old battlefields, you remain on the lookout
+        for lost or discarded objects that you might be able to turn into something useful. 
+        More often than not, what you find is just junk... but you're convinced that one of these days,
+        you're going to hit the jackpot. You've even taken up adventuring as a means to supercharge 
+        your access to all sorts of junk, gear, and loot.
+
+        Choose two attribute boosts. One must be to Dexterity or Intelligence, 
+        and one is a free attribute boost.""")
+# end of Background description
+# start of Background picking
+backgroundPick: str = input("Choose your Background: ")
+if backgroundPick == "Bandit":
+    print(""" Ooooo..a Bandit! what an amazing choice!!  """)
+
+elif backgroundPick == "Gambler":
+    print(""" In my opinion thats the best choice I love the Gambler!!!! """)
+
+elif backgroundPick == "Junk Collector":
+    print("""Intresting choice im curious to see how this plays out 
+                """)
+# person change
+else:
+    print("Isn't there a background you like?")
+# end of Background picking
+# start of Class description
+print("Now then, we move on to the next part. You'll be choosing from four different classes.")
+print()
+print("""Investigator - You seek to uncover the truth, doggedly pursuing leads to reveal the 
+        plots of devious villains, discover ancient secrets, or unravel other mysteries. Your analytical 
+        mind quickly formulates solutions to complicated problems and your honed senses identify even 
+        the most obscure clues. Wielding knowledge as a weapon, you study the creatures and dangers you 
+        encounter to exploit their weaknesses.
+
+        Boost to Intelligence""")
+
+print("""Sorcerer - You didn’t choose to become a spellcaster—you were born one. There’s magic 
+        in your blood, whether a divinity touched one of your ancestors, a forebear communed with a 
+        primal creature, or a powerful occult ritual influenced your line. Self-reflection and study 
+        allow you to refine your inherent magical skills and unlock new, more powerful abilities. The 
+	        power in your blood carries a risk, however, and you constantly face the choice of whether you’ll 
+        rise to become a master spellcaster or fall into destruction.
+
+        (air solidification into objects as big as a shield and as small as an atom
+        can cast various spells(ex. Lightning(3 turn stun shot 10 turn cooldown), fireball(one per combo))
+        animal companion of players choosing)
+
+        Boost to Charisma""")
+
+print("""Rogue - You are skilled and opportunistic. Using your sharp wits and quick reactions, 
+	        you take advantage of your opponents’ missteps and strike where it hurts most. You play a 
+	        dangerous game, seeking thrills and testing your skills, and likely don’t care much for any 
+        laws that happen to get in your way. While the path of every rogue is unique and riddled with 
+        danger, the one thing you all share in common is the breadth and depth of your skills.
+
+        Boost to Dexterity""")
+
+print("""Fighter - Fighting for honor, greed, loyalty, or simply the thrill of battle, you are 
+        an undisputed master of weaponry and combat techniques. You combine your actions through clever 
+        combinations of opening moves, finishing strikes, and counterattacks whenever your foes are 
+        unwise enough to drop their guard. Whether you are a knight, mercenary, sharpshooter, or blade 
+        master, you have honed your martial skills into an art form and perform devastating critical 
+        attacks on your enemies.
+
+        Boost to Strength""")
+# end of Class description
+# start of Class picking
+classPick: str = input("Choose your Class: ")
+if classPick == "Investigator":
+    print("""Amazing choice!! Hopefully your knowledge doesn't get you kill.
+                                Boost to Intelligence """)
+
+elif classPick == "Sorcerer":
+    print("""That's great! Since you are a sorcerer we limited your powers to
+                (air solidification into objects as big as a shield and as small as an atom
+                can cast various spells(ex. Lightning(3 turn stun shot 10 turn cooldown), fireball(one per combo))
+                animal companion of players choosing)
+                                Boost to Charisma """)
+
+elif classPick == "Rogue":
+    print("""Oh, so you chose Rogue. Hope your stealthy enough to escape this.
+                                Boost to Dexterity """)
+
+elif classPick == "Fighter":
+    print("""That's cool! I wonder what you'll do. 
+                               Boost to Strength """)
+
+else:
+    print("isn't there a single class you like?")
+
+
+
+
+
+
+
+def roomOne():
+    # room One
+    print()
+    print("""A man in a dark cloth, standing in a dark alley beckons you over. You try to ignore him and continue your
+walk, but then he calls out, "Do you know the Wayne Manor Secret?" stopping you in your tracks. Your curiosity gets the 
+better of you and you walk back towards the man. Asking what he means, he regales the tale about the Wayne Manor Casino.
+Hes not very trustworthy and you don't really believe him but you cant shake this feeling you need to check the Wayne 
+Manor yourself to see if what he said was true.
+
+This is a text-based RPG experience for a single player written in Python. This is done by a capstone coding and game 
+design experience based on Johann Four's Five-Room-Dungeon design model. This counts as a four hours of Work-Based 
+learning.""")
+    print()
+    print("""As you approach the location given to you by the cloaked stranger you begin to feel uneasy. Although you 
+dont seem to see anything unusual, you start to feel sick to your stomach. You were starting to believe that the 
+stranger tried to make a fool of you but you see something in the distance that pulls you out of your thoughts. It 
+looks like an abandoned building and as you move closer you begin to wonder, "Is this the Wayne Manor...? Maybe the 
+man wasn't lying? Maybe he was right?"  
+    """)
+
+    start = input("Would you like to go inside and start your adventure?: (Yes/No) ")
+    if start == "Yes":
+        print()
+        print("""You decided to go inside. Once you make your way through the doors you start to look around for some 
+secret. You're not quite sure where to start looking or what you're even looking for but you might as well just start 
+poking around. You're in a manor so surely there is a secret to be uncovered, right? As you open miscellaneous drawers 
+you find a piece of cheese? You pocket it, maybe it'll be useful later. You see stairs on the other side of the room but
+the only way to reach them is across a thin wooden plank over the gaping hole in the floor.""")
+        print()
+        cross = input("Will you cross? After all this is the only way across... (Yes/No): ")
+        print()
+        if cross == "Yes":
+            print("""You begin to cross the plank, being very careful as to where you step, after all falling through 
+probably wouldn't be a pleasant experience. About halfway across you hear a loud snap and the board breaks beneath your 
+feet. You fall.
+            
+            """)
+        else:
+            print()
+    else:
+        print()
+
+roomOne()
+
+print()
+print("""Once you collect yourself from the dusty floor, you're able to get a good look around. It appears you are 
+trapped in an old casino. The carpeted floor is covered with glass shards from the broken slot machines that adorn the 
+room. Theres a tall wooden door on the wall opposite from you.""")
+print()
+
+stackStuff = input("""Would you like to attempt to stack the machines to get back through the ceiling? (y/n): """)
+
+if stackStuff == "y":
+    print("""You try to move the first machine but everything is too heavy for you to stack to stack, you arent able to
+escape back through the way you came. It appears the only way to leave this room is through the tall door in the back which 
+is fastened shut with a gold lock.""")
+    print()
+else:
+    print("""Those machines look much to heavy for you to lift on your own. Instead of risking getting hurt you decide 
+to look for another exit. It appears the only way to leave this room is through the tall door in the back which 
+is fastened shut with a gold lock.""")
+    print()
+
+lootStuff = input("""Would you like to search the slot machines for treasure? (y/n): """)
+print()
+
+if lootStuff == "y":
+    print("""As you begin sifting through broken glass you glance up at the wires connecting the machine to the wall. 
+They're all frayed, as if something had been chewing them. Curious, you grab the cord to get a better look and all of 
+the machines turn on at once. The cacophonous sounds of the various machines and the bright lights seem to disturb 
+something in the machine you were attempting to loot. You drop the cord and jump back and watch as a rat with a key tied 
+around its neck runs to the darkest corner of the room, squeaking violently.""")
+
+else:
+    print("""Instead of sifting through broken glass on the off chance you'll find something, you decide it would be a 
+better use of your time to just move to the next room. As you make your way across the space your foot catches on an 
+extremely frayed wire and all of the machines turn on at once. The cacophonous sounds of the various machines and the 
+bright lights scare not only you, but it seems to disturb something that's been living in this room. You stumble to your
+feet and watch as a rat with a key tied around its neck runs to the darkest corner of the room, squeaking violently.""")
+
+print()
+print("It seems the key you need to escape this room is the very one tied around the rats neck.")
+
+ratChoice = input("""You can either:
+1. Vanquish the rat
+2. Befriend the rat
+How would you like to get the key from this creature (1 or 2): """)
+
+
+if ratChoice == "1":
+    isFighting = True
+    print("You decide the easiest way to continue your quest is to simply discard of the rat and take the key.")
+    print()
+    print("The rat: (AC 9, 4 HP). It attacks twice each round with no bonus and will do 2 HP of damage if it hits.")
+    print("You: (AC 12, 8 HP). You'll roll a d8 for damage done.")
+    print()
+
+playerHealth = 8
+ratHealth = 4
+
+playerInt = 0
+for x in range(1, 3):
+    pInt = random.randint(1, 20)
+    if pInt > playerInt:
+        playerInt = pInt
+    print(pInt)
+print(f"The higher number rolled is {playerInt}, so you'll attack first." )
+
+print()
+print(f"You'll need to roll a 9 or higher to hit.")
+print()
+
+playerHit = 0
+for x in range(1, 2):
+    pHit = random.randint(1, 20)
+    if pHit >= 9 :
+        playerHit = pHit
+        print(f"You rolled a {pHit}")
+        print(f"{playerHit} is higher than 9, your attack hit.")
+        print()
+
+        playerDamage = 0
+        for x in range(1, 2):
+            pDamage = random.randint(1, 8)
+            if pDamage >= 4:
+                playerDamage = pDamage
+                print(f"You rolled a {pDamage}")
+                print(f"You did {playerDamage} damage, the rat passed out.")
+                print()
+                print("""You carefully untie the ribbon from the rats neck and the key falls to the floor. You pick it 
+up and stand up and walking towards the door. You unlock the door and push it open.""")
+                isFighting = False
+
+                # Kill rat end of violent route 1
+
+            else:
+                playerDamage = pDamage
+                print(f"You rolled a {pDamage}")
+                ratHealth = ratHealth - pDamage
+                print(f"You did {playerDamage} damage, the rats is still alive.")
+                print()
+
+                #rats turn again
+                print("Now its the rats turn.")
+                print(f"Your armour class is 12, it'll have to roll above that to hit.")
+                print()
+                ratHit = 0
+                for x in range(1, 3):
+                    rHit = random.randint(1, 20)
+                    if rHit >= 12:
+                        ratHit = rHit
+                        print(f"It rolled a {rHit}")
+                        print(f"{ratHit} is higher than 12, its attack hit.")
+                        playerHealth = playerHealth - 2
+                        print(f"Your health is now {playerHealth}")
+
+                    else:
+                        ratHit = rHit
+                        print(f"It rolled a {rHit}")
+                        print(f"{ratHit} is less than 12, its attack missed.")
+
+# player turn again
+print()
+print("It's your turn again")
+playerHit2 = 0
+for x in range(1, 2):
+    pHit2 = random.randint(1, 20)
+    if pHit2 >= 9:
+        playerHit2 = pHit2
+        print(f"You rolled a {pHit2}")
+        print(f"{playerHit2} is higher than 9, your attack hit.")
+        print()
+
+    playerDamage2 = 0
+    for x in range(1, 2):
+        pDamage2 = random.randint(1, 8)
+        if pDamage2 >= 4:
+            playerDamage2 = pDamage2
+            print(f"You rolled a {pDamage2}")
+            print(f"You did {playerDamage2} damage, the rat passed out.")
+            print()
+            print("""You carefully untie the ribbon from the rats neck and the key falls to the floor. You 
+                                pick it up and stand up and walking towards the door. You unlock the door and push it open.""")
+            isFighting = False
+
+    else:
+        playerHit = pHit
+        print(f"You rolled a {pHit}")
+        print(f"{playerHit} is lower than 9, your attack missed.")
+        print()
+
+        # rats turn
+        print("Now its the rats turn.")
+        print(f"Your armour class is 12, it'll have to roll above that to hit.")
+        print()
+        ratHit = 0
+        for x in range(1, 3):
+            rHit = random.randint(1, 20)
+            if rHit >= 12:
+                ratHit = rHit
+                print(f"It rolled a {rHit}")
+                print(f"{ratHit} is higher than 12, its attack hit.")
+                playerHealth = playerHealth - 2
+                print(f"Your health is now {playerHealth}")
+
+            else:
+                ratHit = rHit
+                print(f"It rolled a {rHit}")
+                print(f"{ratHit} is less than 12, its attack missed.")
+
+
+    #player turn again
+    print()
+    print("It's your turn again")
+    playerHit2 = 0
+    for x in range(1, 2):
+        pHit2 = random.randint(1, 20)
+        if pHit2 >= 9:
+            playerHit2 = pHit2
+            print(f"You rolled a {pHit2}")
+            print(f"{playerHit2} is higher than 9, your attack hit.")
+            print()
+
+        playerDamage2 = 0
+        for x in range(1, 2):
+            pDamage2 = random.randint(1, 8)
+            if pDamage2 >= 4:
+                playerDamage2 = pDamage2
+                print(f"You rolled a {pDamage2}")
+                print(f"You did {playerDamage2} damage, the rat passed out.")
+                print()
+                print("""You carefully untie the ribbon from the rats neck and the key falls to the floor. You 
+pick it up and stand up and walking towards the door. You unlock the door and push it open.""")
+            isFighting = False
+
+else:
+    print()
+    print("""You decide the easiest way to continue your quest is to simply befriend the creature, theres no real need 
+for violence. """)
+    print()
+    tameRat = input("""Theres not many options you can think of to tame this rat to get the key from it.
+1. You can see that the flashing lights and loud noises are distressing the rat so maybe you should find a way to turn 
+them off
+2. The rats awfully frail, maybe you could give it the bread you found in the previous room
+What would you like to try? (1 or 2): """)
+    if tameRat == "1":
+        print()
+        print("""You pull the cord completely out of the wall and all of the machines shut off. The room is suddenly 
+much quieter, the only noise is coming from the rat who is still squeaking, albeit quieter than before. It still seems 
+upset though. Maybe it's hungry.""")
+        print()
+        print("""You take the bread out of your pocket and hold it out to the rodent. It stops squeaking and stares at 
+you, seemingly considering your offer. It runs over to you and immediately begins nibbling on the bread. This is 
+definitely your chance to get that key so you drop the food on the floor. You carefully untie the ribbon around its neck 
+and the key falls to the floor. You pick it up.""")
+    else:
+        print()
+        print("""You offer up the bread and the rat perks up, it inches closer to you until a loud noise sounds from 
+the machine next to you. It immediately sets the creature off once again and it cowers back into the corner. The slot 
+machines are really upsetting the poor thing.""")
+        print()
+        print("""You pull the cord completely out of the wall and all of the machines shut off. It's much darker and 
+quieter, the only noise coming from the rat squeaking. Its eyes are locked on the bread, seemingly waiting to see if the
+machines turn back on. After about thirty seconds it seems satisfied and runs across the room to eat the bread out of 
+your hand. This is definitely your chance to get that key so you drop the food on the floor. You carefully untie the 
+ribbon around its neck and the key falls to the floor. You pick it up""")
+    print()
+    print("""You pet the rat for a moment before standing up and walking towards the door. You unlock the door and push 
+it open.""")
+#END OF ROOM (CALM ROUTE)
+
+#room 3
+
+print("""You walk into the next room carefully, looking out for any traps there may be. Despite everything, you find 
+yourself intrigued about what awaits for you in the new room.
+
+You enter the room fully and the door slams shut behind you. You've got nothing to do but look around. It seems to be a
+very normal room full of nothing but abandoned stuff and machines. This honestly surprised you because after the last
+room you were expecting something to come out of nowhere and attack you. This is oddly peaceful.. surely something will 
+attack me right...?
+
+At this point you don't know if you were just being paranoid. But even so you weren't about to take the risk by just 
+standing here. As you continue walking through the room you see something out of the corner of your eye. It was a pile
+of treasure! A shiny stack of diamonds, sapphires, and rubies!
+""")
+
+print("""
+""")
+
+willYouTake = input("Are you going to take the treasure? (Yes/No): ")
+if willYouTake == "Yes":
+    print("You shovel the pile into your pockets, which are now much heavier. You continue to the door out of the room.")
+else:
+    print("""You're not really willing to risk picking up some possibly cursed treasure. It just seems TOO perfectly 
+placed. Instead you walk to the door and continue your adventure into the next room.""")
+
+#end of room 3
+
+survive = random.randint(1, 12)
+def roomFour():
+    isPlaying = True
+    while isPlaying:
+        print("""You walk slowly, cautiously, into the next room, worried about another attacker. The room is filled with 
+broken slot machines and it has a ladder on the other side. You see a record player has a jazz song embedded into it. You 
+can't read the name due to the label being decayed. How old IS this place? That record may sell for a lot, being 
+vintage an all..""")
+        print()
+        takeRecord = input("Do you take the record? (Yes/No): ")
+
+        if takeRecord == "Yes":
+                #final boss
+                print()
+                print("""A slimy, black, liquid started seeping out the needle of the record player, which rose up to 
+form a demon with horns as large as a ceiling fan's blade. He spoke the words in a deep, groveling voice that shook the 
+building, "I am Al Diction, the previous owner of this fine establishment. You decide to trespass on my resting place? 
+To what, steal all of my money and music? This is all I have left." """)
+                print()
+
+                fightDemon = input("He doesn't see you... yet. Do you wish to fight? (Yes/No): ")
+                print()
+
+                    #Al diction fight
+                if fightDemon == "Yes":
+
+                    print("The demon quickly turned around and used his large hands to slowly crawl towards you.")
+
+                    print("""As he reached you, he seemed to tower over you by a good 10 feet! He lifted the slimy, 
+black palm and smacked down, engulfing you in the goo. It didn't hurt like you expected it to, but the goo had a strange 
+property to it, causing you to obey the demons every command.""")
+
+                    print("You lived an eternity as a employee of Al Diction, you'll tend the casino forever. Game Over.")
+                    isPlaying = False
+
+                elif fightDemon == "No":
+                    print("""You know that the horrid thing is too large to defeat without proper armory. You'll have to 
+roll above an 8 to not be seen.""")
+                    print()
+
+                   #diceroll/survive
+                    if survive >= 8:
+                        print(f"You rolled a {survive}!")
+                        print("""You cautiously crawled around the perimeter, making sure not to wake the beast's senses. You 
+make it to the ladder on the other side. You see the door but get distracted by a pile of gold. You pick up a single 
+coin, and a strange voice sounds from the top of the ladder. "I was just like you, once. All alone, so caught up in the 
+thrill of the game. Do not allow this addiction to take you over.." You drop the coin and proceed to climb the ladder. """)
+                        isPlaying = False
+                    elif survive <= 8:
+                        print(f"You rolled a {survive}!")
+                        print("""He heard a coin fall out of your pocket.. he forms a mallet with his forearm and throws 
+it at you! You got knocked out. Game Over.
+                        """)
+                        isPlaying = False
+
+        else:
+                print()
+                print("""You ignore it and walk past the record player. Out of the corner of your eye you see a pile of 
+gold that distracts you. You pick up the small pile, shove it into your pocket and proceed to climb the ladder.  """)
+                isPlaying = False
+
+roomFour()
+
+def roomFive():
+
+    #Introducing the room Five
+    play = True
+    while play is True:
+        print(f"""After climbing the ladder, your presented with two old chests, seemly having been left there for a long 
+time. When you look around there is a door with a large glowing 'EXIT' sign above it.""")
+        print()
+
+        openChest = input("Which chest do you open? (pick 1 or 2): ")
+
+        if openChest == "1":
+            print()
+            print("""You find a few shiny gold coins, as well as a pack of cards that shuffles in your favor. You stand 
+up and make your way to the door. You take a deep breath, push the doors open and step into the light of day.""")
+            play = False
+        elif openChest == "2":
+            print()
+            print("""There you see 2 gold coins, and ten playing chips that will teleport back into your pocket hours later. You stand 
+up and make your way to the door. You take a deep breath, push the doors open and step into the light of day.""")
+            play = False
+        else:
+            print()
+            print("""You dont get anything! You stand up and make your way to the door. You take a deep breath, push the 
+doors open and step into the light of day.""")
+            play = False
+
+    #End of the room Five
+
+roomFive()
