@@ -1,0 +1,65 @@
+#room four#
+import random
+
+survive = random.randint(1, 12)
+def roomFour():
+    isPlaying = True
+    while isPlaying:
+        print("""You walk slowly, cautiously, into the next room, worried about another attacker. The room is filled with 
+broken slot machines and it has a ladder on the other side. You see a record player has a jazz song embedded into it. You 
+can't read the name due to the label being decayed. How old IS this place? That record may sell for a lot, being 
+vintage an all..""")
+        print()
+        takeRecord = input("Do you take the record? (Yes/No): ")
+
+        if takeRecord == "Yes":
+                #final boss
+                print()
+                print("""A slimy, black, liquid started seeping out the needle of the record player, which rose up to 
+form a demon with horns as large as a ceiling fan's blade. He spoke the words in a deep, groveling voice that shook the 
+building, "I am Al Diction, the previous owner of this fine establishment. You decide to trespass on my resting place? 
+To what, steal all of my money and music? This is all I have left." """)
+                print()
+
+                fightDemon = input("He doesn't see you... yet. Do you wish to fight? (Yes/No): ")
+                print()
+
+                    #Al diction fight
+                if fightDemon == "Yes":
+
+                    print("The demon quickly turned around and used his large hands to slowly crawl towards you.")
+
+                    print("""As he reached you, he seemed to tower over you by a good 10 feet! He lifted the slimy, 
+black palm and smacked down, engulfing you in the goo. It didn't hurt like you expected it to, but the goo had a strange 
+property to it, causing you to obey the demons every command.""")
+
+                    print("You lived an eternity as a employee of Al Diction, you'll tend the casino forever. Game Over.")
+                    isPlaying = False
+
+                elif fightDemon == "No":
+                    print("""You know that the horrid thing is too large to defeat without proper armory. You'll have to 
+roll above an 8 to not be seen.""")
+                    print()
+
+                   #diceroll/survive
+                    if survive >= 8:
+                        print(f"You rolled a {survive}!")
+                        print("""You cautiously crawled around the perimeter, making sure not to wake the beast's senses. You 
+make it to the ladder on the other side. You see the door but get distracted by a pile of gold. You pick up a single 
+coin, and a strange voice sounds from the top of the ladder. "I was just like you, once. All alone, so caught up in the 
+thrill of the game. Do not allow this addiction to take you over.." You drop the coin and proceed to climb the ladder. """)
+                        isPlaying = False
+                    elif survive <= 8:
+                        print(f"You rolled a {survive}!")
+                        print("""He heard a coin fall out of your pocket.. he forms a mallet with his forearm and throws 
+it at you! You got knocked out. Game Over.
+                        """)
+                        isPlaying = False
+
+        else:
+                print()
+                print("""You ignore it and walk past the record player. Out of the corner of your eye you see a pile of 
+gold that distracts you. You pick up the small pile, shove it into your pocket and proceed to climb the ladder.  """)
+                isPlaying = False
+
+roomFour()
