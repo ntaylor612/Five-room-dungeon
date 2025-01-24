@@ -1,0 +1,174 @@
+import time, os
+
+print("""The Wayne Manor Secret
+A man in a dark cloth, standing in a dark alley tells you to come over. You try to ignore him and 
+continue to walk, but then he says "Do you know the Wayne Manor Secret?" having stopped in your 
+tracks. Your curiosity gets the better of you and you walk back to the man. Asking what he means, 
+he begins to tell you about the Wayne Manor Casino. You don't really believe him and decide to 
+check the Wayne Manor yourself to see if what he said was right.
+
+A text-based RPG experience for a single player written in Python. This is done by a capstone 
+coding and game design experience based on Johann Four's Five-Room-Dungeon design model. This 
+counts as a three hours of Work-Based learning.
+
+Learn More Here https://www.roleplayingtips.com/5-room-dungeons/""")
+
+time.sleep(2)
+os.system("cls")
+
+print("""Imagine your character
+To begin let's start with your identity:
+
+Consider these traits for your character:
+
+What's the character name?
+
+What pronoun will be used?
+
+How old is your character?""")
+
+time.sleep(2)
+os.system("cls")
+
+print("""Welcome to the Wiki.
+
+Strength Strength measures your character's physical power. Strength is important if your 
+character plans to engage in hand-to-hand combat. Your Strength modifier gets added to melee 
+damage rolls and determines how much your character can carry.
+
+Dexterity Dexterity measures your character's agility, balance, and reflexes. Dexterity is 
+important if your character plans to make attacks with ranged weapons or use stealth to surprise 
+foes.
+
+Constitution Constitution measures your character's health and stamina. Constitution is important 
+for all characters, especially those who fight in close range.
+
+Intelligence Intelligence measures how well your character can learn and reason. A high 
+Intelligence allows your character to analyze situations and understand patterns, and it means 
+they can become trained in additional skills and might be able to master additional languages.
+
+Wisdom Wisdom measures your character's common sense, awareness, and intuition. High Wisdom helps 
+your character detect hidden things and resist mental effects.
+
+Charisma Charisma measures your character's personal magnetism and strength of personality. A 
+high Charisma modifier helps you build relationships and influence the thoughts and moods of 
+others with social skills.""")
+
+time.sleep(4)
+os.system("cls")
+
+print("""Choose a Ancestries
+
+Grippli - Gripplis are shy and cautious people who generally seek to avoid being drawn into the 
+complicated and dangerous affairs of others. Despite their outlook and small stature, gripplis 
+often take bold and noble action when the situation demands it. Reclusive and canny, gripplis 
+are treetop survivalists who harvest their homes' bounty and defend themselves against terrible 
+threats. Their reliance on cunning and simple tools has led to gripplis being mischaracterized 
+as primitive, yet this overlooks their shaping of the land with hidden orchards and camouflaged 
+causeways that allow gripplis to live in prosperous peace. Gripplis are most likely to emerge 
+from their forest homes to trade, explore, and combat threats that would despoil the world.
+
+Health - 6 Speed - 25 +1 free boost +1 Dexterity boost +1 Wisdom boost -1 Strength Penalty
+
+Puppet master - has the ability to make and bring to life puppets but he can only bring them to 
+life if they use the spell
+
+Health - 8 Speed - 25 2x free boosts
+
+Vishkany - Vishkanyas are ophidian humanoids who carry potent venom within their blood and saliva.
+Largely misunderstood due to old tales of their toxicity and natural finesse, vishkanyas work to 
+grow into more than just what stories paint them to be. The true nature of vishkanyas' origin is 
+a matter of debate. Some vishkanyas believe they are rejected spawn of Ravithra, which explains 
+the animosity between vishkanyas and nagas. Others believe themselves the stolen offspring of a 
+forgotten progenitor whose name was excised from history. Regardless, one thing is quite clear: 
+vishkanyas are survivors. Throughout history, fear of their deadly abilities forced vishkanyas 
+to experience subjugation, exploitation, and ostracizing. Yet through it all, they endured. Now 
+free of chains to bind them, vishkanyas live in close-knit groups, and use their love of 
+storytelling and the arts to keep a detailed history of their people while they determine how 
+best to proceed in a world ripe with opportunity.
+
+Health - 8 Speed - 25 +1 Dexterity boost +1 Free boost
+
+Human - As unpredictable and varied as any, humans have exceptional drive and the capacity to 
+endure and expand. Though many civilizations thrived before humanity rose to prominence, humans 
+have built some of the greatest and the most terrible societies throughout the course of history, 
+and today they are the most populous people in the realms.
+
+Health - 8 Speed - 25 2x free boosts""")
+
+time.sleep(6)
+os.system("cls")
+
+print("""Choose a Background
+
+Bandit - Your past includes no small amount of rural banditry, robbing travelers on the road and 
+scraping by. Whether your robbery was sanctioned by a local noble or you did so of your own 
+accord, you eventually got caught up in the adventuring life. Now, adventure is your stock and 
+trade, and years of camping and skirmishing have only helped.
+
+Choose two attribute boosts. One must be to Dexterity or Charisma, and one is a free attribute 
+boost.
+
+Gambler - The thrill of the win drew you into games of chance. This might have been a lucrative 
+sideline that paled in comparison to the real risks of adventuring, or you might have fallen on 
+hard times due to your gambling and pursued adventuring as a way out of a spiral.
+
+Choose two attribute boosts. One must be to Dexterity or Charisma, and one is a free attribute 
+boost.
+
+Junk Collector - You live by the adage that one person's trash is another's treasure. Whether
+by sifting through scrap heaps or digging up old battlefields, you remain on the lookout for 
+lost or discarded objects that you might be able to turn into something useful. More often than 
+not, what you find is just junk... but you're convinced that one of these days, you're going to 
+hit the jackpot. You've even taken up adventuring as a means to supercharge your access to all 
+sorts of junk, gear, and loot.
+
+Choose two attribute boosts. One must be to Dexterity or Intelligence, and one is a free 
+attribute boost.""")
+
+time.sleep(5)
+os.system("cls")
+
+print("""Classes
+
+Investigator - You seek to uncover the truth, doggedly pursuing leads to reveal the plots of 
+devious villains, discover ancient secrets, or unravel other mysteries. Your analytical mind 
+quickly formulates solutions to complicated problems and your honed senses identify even the 
+most obscure clues. Wielding knowledge as a weapon, you study the creatures and dangers you 
+encounter to exploit their weaknesses.
+
+Boost to Intelligence
+
+Sorcerer - You didn’t choose to become a spellcaster—you were born one. There’s magic in your 
+blood, whether a divinity touched one of your ancestors, a forebear communed with a primal 
+creature, or a powerful occult ritual influenced your line. Self-reflection and study allow you 
+to refine your inherent magical skills and unlock new, more powerful abilities. The power in your 
+blood carries a risk, however, and you constantly face the choice of whether you’ll rise to 
+become a master spellcaster or fall into destruction.
+
+air solidification into objects as big as a shield and as small as an atom
+
+can cast various spells(ex. Lightning(3 turn stun shot 10 turn cooldown), fireball(one per combo))
+
+animal companion of players choosing
+
+Boost to Charisma
+
+Rogue - You are skilled and opportunistic. Using your sharp wits and quick reactions, you take 
+advantage of your opponents’ missteps and strike where it hurts most. You play a dangerous game, 
+seeking thrills and testing your skills, and likely don’t care much for any laws that happen to 
+get in your way. While the path of every rogue is unique and riddled with danger, the one thing 
+you all share in common is the breadth and depth of your skills.
+
+Boost to Dexterity
+
+Fighter - Fighting for honor, greed, loyalty, or simply the thrill of battle, you are an 
+undisputed master of weaponry and combat techniques. You combine your actions through clever 
+combinations of opening moves, finishing strikes, and counterattacks whenever your foes are 
+unwise enough to drop their guard. Whether you are a knight, mercenary, sharpshooter, or blade 
+master, you have honed your martial skills into an art form and perform devastating critical 
+attacks on your enemies.
+
+Boost to Strength""")
+
+time.sleep(6)
