@@ -1,0 +1,43 @@
+def roomOne():
+    # room One
+    print()
+    print("""A man in a dark cloth, standing in a dark alley beckons you over. You try to ignore him and continue your
+walk, but then he calls out, "Do you know the Wayne Manor Secret?" stopping you in your tracks. Your curiosity gets the 
+better of you and you walk back towards the man. Asking what he means, he regales the tale about the Wayne Manor Casino.
+Hes not very trustworthy and you don't really believe him but you cant shake this feeling you need to check the Wayne 
+Manor yourself to see if what he said was true.
+
+This is a text-based RPG experience for a single player written in Python. This is done by a capstone coding and game 
+design experience based on Johann Four's Five-Room-Dungeon design model. This counts as a four hours of Work-Based 
+learning.""")
+    print()
+    print("""As you approach the location given to you by the cloaked stranger you begin to feel uneasy. Although you 
+dont seem to see anything unusual, you start to feel sick to your stomach. You were starting to believe that the 
+stranger tried to make a fool of you but you see something in the distance that pulls you out of your thoughts. It 
+looks like an abandoned building and as you move closer you begin to wonder, "Is this the Wayne Manor...? Maybe the 
+man wasn't lying? Maybe he was right?"  
+    """)
+
+    start = input("Would you like to go inside and start your adventure?: (Yes/No) ")
+    if start == "Yes":
+        print()
+        print("""You decided to go inside. Once you make your way through the doors you start to look around for some 
+secret. You're not quite sure where to start looking or what you're even looking for but you might as well just start 
+poking around. You're in a manor so surely there is a secret to be uncovered, right? As you open miscellaneous drawers 
+you find a piece of cheese? You pocket it, maybe it'll be useful later. You see stairs on the other side of the room but
+the only way to reach them is across a thin wooden plank over the gaping hole in the floor.""")
+        print()
+        cross = input("Will you cross? After all this is the only way across... (Yes/No): ")
+        print()
+        if cross == "Yes":
+            print("""You begin to cross the plank, being very careful as to where you step, after all falling through 
+probably wouldn't be a pleasant experience. About halfway across you hear a loud snap and the board breaks beneath your 
+feet. You fall.
+            
+            """)
+        else:
+            print()
+    else:
+        print()
+
+roomOne()
