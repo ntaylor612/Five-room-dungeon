@@ -1,0 +1,26 @@
+#room 3
+
+print("""You walk into the next room carefully, looking out for any traps there may be. Despite everything, you find 
+yourself intrigued about what awaits for you in the new room.
+
+You enter the room fully and the door slams shut behind you. You've got nothing to do but look around. It seems to be a
+very normal room full of nothing but abandoned stuff and machines. This honestly surprised you because after the last
+room you were expecting something to come out of nowhere and attack you. This is oddly peaceful.. surely something will 
+attack me right...?
+
+At this point you don't know if you were just being paranoid. But even so you weren't about to take the risk by just 
+standing here. As you continue walking through the room you see something out of the corner of your eye. It was a pile
+of treasure! A shiny stack of diamonds, sapphires, and rubies!
+""")
+
+print("""
+""")
+
+willYouTake = input("Are you going to take the treasure? (Yes/No): ")
+if willYouTake == "Yes":
+    print("You shovel the pile into your pockets, which are now much heavier. You continue to the door out of the room.")
+else:
+    print("""You're not really willing to risk picking up some possibly cursed treasure. It just seems TOO perfectly 
+placed. Instead you walk to the door and continue your adventure into the next room.""")
+
+#end of room 3
