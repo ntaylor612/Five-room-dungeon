@@ -1,0 +1,30 @@
+def roomFive():
+
+    #Introducing the room Five
+    play = True
+    while play is True:
+        print(f"""After climbing the ladder, your presented with two old chests, seemly having been left there for a long 
+time. When you look around there is a door with a large glowing 'EXIT' sign above it.""")
+        print()
+
+        openChest = input("Which chest do you open? (pick 1 or 2): ")
+
+        if openChest == "1":
+            print()
+            print("""You find a few shiny gold coins, as well as a pack of cards that shuffles in your favor. You stand 
+up and make your way to the door. You take a deep breath, push the doors open and step into the light of day.""")
+            play = False
+        elif openChest == "2":
+            print()
+            print("""There you see 2 gold coins, and ten playing chips that will teleport back into your pocket hours later. You stand 
+up and make your way to the door. You take a deep breath, push the doors open and step into the light of day.""")
+            play = False
+        else:
+            print()
+            print("""You dont get anything! You stand up and make your way to the door. You take a deep breath, push the 
+doors open and step into the light of day.""")
+            play = False
+
+    #End of the room Five
+
+roomFive()
